@@ -21,7 +21,6 @@ public class Array2In1 {
 			arr1[i] = sc.nextInt();
 
 		}
-
 		int a1 = arr1.length;
 		System.out.println("Enter Second Array elements");
 		for (i = 0; i < arr2.length; i++) {
