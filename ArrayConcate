@@ -26,15 +26,12 @@ public class Array2In1 {
 		System.out.println("Enter Second Array elements");
 		for (i = 0; i < arr2.length; i++) {
 			arr2[i] = sc.nextInt();
-
 		}
 		int a2 = arr2.length;
 		int arr3[] = new int[a1 + a2];
-
 		for (i = 0; i < a1; i++) {
 			arr3[i] = arr1[i];
 		}
-
 		for (int j = 0; j < a2; j++) {
 			arr3[a1 + j] = arr2[j];
 		}
