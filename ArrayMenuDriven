@@ -1,0 +1,89 @@
+import java.util.Scanner;
+
+public class MenuDrivenArray {
+
+	public static void main(String[] args) {
+
+		int ch, size;
+
+		System.out.println(
+				" 1:Read Array\n 2:Print Array \n 3:Search element in array\n 4:Reverse Array\n 5:Even number from array\n 6:sum of array element");
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter size of Array ");
+		size = sc.nextInt();
+		int arr[] = new int[size];
+
+		System.out.println("Array created for length " + arr.length);
+
+		do {
+
+			System.out.println("Enter Choice ");
+			ch = sc.nextInt();
+
+			switch (ch) {
+			case 1:
+
+				System.out.println("Enter Elements of array ");
+				for (int i = 0; i < arr.length; i++) {
+					arr[i] = sc.nextInt();
+				}
+				break;
+			case 2:
+				for (int i = 0; i < arr.length; i++) {
+					System.out.print(" " + arr[i]);
+				}
+				System.out.println("\n");
+				break;
+			case 3:
+				System.out.println("Enter element to search");
+				int no = sc.nextInt();
+				boolean flag = false;
+				for (int i = 0; i <= arr.length; i++) {
+					if (arr[i] == no) {
+						flag = true;
+						break;
+					} else
+						flag = false;
+				}
+				if (flag == true)
+					System.out.println("Entered element is found in array");
+				else
+					System.out.println("Not found in array");
+				break;
+			case 4:
+				System.out.println("Reverse Array is ");
+
+				for (int i = size - 1; i >= 0; i--) {
+					System.out.println(" " + arr[i]);
+				}
+				break;
+			case 5:
+				System.out.println("Even no. in Array are ");
+				for (int i = 0; i < arr.length; i++) {
+					if (arr[i] % 2 == 0)
+						System.out.println(arr[i]);
+				}
+				break;
+			case 6:
+				int total = 0;
+				System.out.println("Sum of Element in Array are ");
+				for (int i = 0; i < arr.length; i++) {
+					total = total + arr[i];
+
+				}
+				System.out.println(total);
+				break;
+
+			default:
+				System.out.println("invalid choice");
+				break;
+
+			}
+		} while (ch <= 6);
+
+		sc.close();
+
+	}
+
+}
