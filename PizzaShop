@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class PizzaShop {
+
+	public static void main(String[] args) {
+
+		int ch, qty, total = 0;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("****Menu****");
+		System.out.println("1.Veggie Pizza");
+		System.out.println("2.Pepperoni Pizza");
+		System.out.println("3.Meat Pizza");
+		System.out.println("4.Chicken Pizza");
+		System.out.println("5.Bill ");
+
+		
+		do {
+			System.out.println("Select a option which pizza you want");
+			ch = sc.nextInt();
+		switch (ch) {
+
+			case 1: {
+				System.out.println(" Veggie Pizza Price RS 300 Enter qty");
+				qty = sc.nextInt();
+				total += qty * 300;
+
+				break;
+			}
+			case 2: {
+				System.out.println(" Pepperoni Pizza Price RS 400 Enter qty");
+				qty = sc.nextInt();
+				total += qty * 400;
+
+				break;
+			}
+			case 3: {
+				System.out.println(" Meat Pizza Price RS 600 Enter qty");
+				qty = sc.nextInt();
+				total += qty * 600;
+
+				break;
+			}
+			case 4: {
+				System.out.println(" Chicken Pizza Price RS 500 Enter qty");
+				qty = sc.nextInt();
+				total += qty * 500;
+
+				break;
+			}
+			case 5: {
+				System.out.println("Total amount to Pay is " + total + " Rs ");
+				System.out.println("***Thank You Visit Again***");
+				System.out.println("------------------------ ");
+				break;
+			}
+			default:
+				System.out.println("invalid option");
+
+			}
+			
+			
+		} while (ch > 0 && ch < 5);
+		sc.close();
+	}
+
+}
