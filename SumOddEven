@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class SumOddEven {
+
+	public static void main(String[] args) {
+		int n, even_sum = 0, odd_sum = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter num ");
+		n = sc.nextInt();
+
+		for (int i = 0; i <= n; i++) {
+			if (i % 2 == 0) {
+				even_sum = even_sum + i;
+
+			} else {
+				odd_sum = odd_sum + i;
+			}
+		}
+		System.out.println("Odd sum " + odd_sum);
+		System.out.println("Even sum " + even_sum);
+		sc.close();
+	}
+
+}
