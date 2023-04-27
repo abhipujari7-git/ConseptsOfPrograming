@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Power {
+
+	public static void main(String[] args) {
+		int m, n, ans = 1;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number ");
+		m = sc.nextInt();
+		System.out.println("Enter its power");
+		n = sc.nextInt();
+
+		for (int i = 1; i <= n; i++) {
+			ans = ans * m;
+		}
+		System.out.println("number " + m + "  power " + n + " Answer " + ans);
+		sc.close();
+	}
+
+}
