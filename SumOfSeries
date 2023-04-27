@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class SumOfSeries {
+	public static void main(String[] args) {
+		int n, ans = 0;
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter num ");
+		n = sc.nextInt();
+
+		for (int i = 1; i <= n; i++) {
+			ans = ans + i;
+		}
+
+		System.out.println("ans " + ans);
+		sc.close();
+	}
+
+}
